@@ -11,6 +11,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -53,10 +55,10 @@ public class MainActivity extends AppCompatActivity {
     public void onCheckboxClicked(View view) {
 
 
-                int price = calculatePrice(Check_whipped(), Check_choclate());
-                TextView pricetextview = findViewById(R.id.price_text_view);
-                pricetextview.setText("$ " + price + "");
-
+        int price = calculatePrice(Check_whipped(), Check_choclate());
+        TextView pricetextview = findViewById(R.id.price_text_view);
+        pricetextview.setText("$ " + price + "");
+//NumberFormat.getCurrencyInstance().format(price)
     }
 
     public boolean Check_whipped() {
